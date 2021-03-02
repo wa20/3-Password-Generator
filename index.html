@@ -29,8 +29,8 @@
                         <div class="pw-otpions">
                             
 
-                            <label for="">Password Length</label>
-                            <input id="" type="number"/>
+                            <label for="length">Password Length</label>
+                            <input id="length" type="number" min='8' max='128'/>
                             
                         </div>
 
@@ -48,12 +48,6 @@
                             
                         </div>
 
-                        <!-- <div class="pw-otpions">
-                            <label for=""></label>
-                            <input id=""></input>
-                            Password length
-                        </div> -->
-
                         <div class="pw-otpions">
                             
                             <label for="lowerCase">Include Lower-Case</label>
@@ -68,13 +62,19 @@
                             
                         </div>
 
+                         <div class="pw-otpions">
+
+                            <label for="specialCharacter">Type a character to include</label>
+                            <input id="specialCharacter" type="text"/>
+                            
+                        </div>
+
                 <!-- </ul> -->
             </section>
 
             <section class="pw-generator">
                 <div>
                     <button>Generate Password</button>
-
                 </div>
             </section>
 

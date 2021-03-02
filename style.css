@@ -97,7 +97,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linen;
+    background: rgba(250, 240, 230, 0.712);
     width: 100%;
     border-radius: 0 0 20px 20px;
 
