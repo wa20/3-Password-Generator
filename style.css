@@ -22,9 +22,27 @@ ol, ul {
 ====================*/
 
 html {
+    background: linear-gradient(to right bottom,#88b9fa ,#c70808da);
     min-height: 100vh;
-    background: linear-gradient(25deg,#88b9fa,#05ee81da);
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+  
 }
 
 
+
+.container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.808);
+    min-height: 70vh;
+    width: 60vh;
+}
 
