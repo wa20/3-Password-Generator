@@ -29,20 +29,78 @@ html {
     align-content: center;
     justify-content: center;
     align-items: center;
-
-  
 }
-
 
 
 .container {
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.808);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.377), #ffffffec);
     min-height: 70vh;
     width: 60vh;
 }
 
+/*======== 
+
+ - display section
+
+==========*/
+
+
+.form-bar {
+    background: linen;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 20px 20px 0 0;
+    padding: 30px;
+    width: 100%;
+    
+}
+
+/*======== 
+
+ - Choice container section
+
+==========*/
+
+.choice-container {
+    /* background: cornflowerblue; */
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 50px;
+   
+}
+
+
+
+
+/*======== 
+
+ - password generator button
+
+==========*/
+
+.pw-generator{
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linen;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+
+
+
+}
