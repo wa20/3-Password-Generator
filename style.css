@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+/*====================
+- Table of Contents -
+
+1 - 
+
+2 -
+
+3 -
+
+4 - 
+
+====================*/
+
+html {
+    min-height: 100vh;
+    background: linear-gradient(25deg,#88b9fa,#05ee81da);
+}
+
+
+
