@@ -9,25 +9,22 @@ function copyButton() {
   document.execCommand("copy");
   alert("Copied password: " + resultEl.value);
 }
-
-
-
-
 copyEl.addEventListener("click", copyButton);
 
 function generatePassword() {
-
   const lengthEl = document.getElementById("length").value;
   const symbolEl = document.getElementById("symbols").checked;
   const numberEl = document.getElementById("numbers").checked;
   const lowerCaseEl = document.getElementById("lowerCase").checked;
   const upperCaseEl = document.getElementById("upperCase").checked;
-  const specialCharacterEl = document.getElementById("specialCharachter");
+  const specialCharacterEl = document.getElementById("specialCharacter").value;
 
   const numbers = "0123456789";
   const lowerCase = "abcdefghijklmnopqrstuvwxyz";
   const upperCase = "ABCDEFGHIJKLMNOPQRSTUVW";
   const symbols = "§!@£#$%^&*()_-+><?";
+  let password = "";
+  let wordOps = "";
 
   function includeSymbols() {
     return symbols[Math.floor(Math.random() * symbols.length)];
@@ -45,53 +42,59 @@ function generatePassword() {
     return upperCase[Math.floor(Math.random() * upperCase.length)];
   }
 
-  console.log(symbolEl)
-  console.log(lengthEl)
-  
+  if(specialCharacterEl.length > 0) {
+      password += specialCharacterEl
+  }
+
+
+  if (symbolEl === true) {
+    let randomSymbol = includeSymbols();
+    password += randomSymbol;
+    wordOps += symbols
+  }
+
+
+  if (numberEl === true) {
+    let randomNumber = includeNumbers();
+    password += randomNumber;
+    wordOps += numbers
+  }
+
+
+  if (lowerCaseEl === true) {
+    let randomLowerCase = includeLowerCase();
+    password += randomLowerCase;
+    wordOps += lowerCase
+  }
+
+
+  if (upperCaseEl === true) {
+    let randomUpperCase = includeUpperCase();
+    password += randomUpperCase;
+    wordOps += upperCase
+  }
+
+
+  for( var i = password.length; i < lengthEl; i++ ) {
+
+    password += wordOps[Math.floor(Math.random() * wordOps.length)]
+
+  }
+
+  resultEl.value = password;
+
+
+if(symbolEl === false && numberEl === false && lowerCaseEl === false && upperCaseEl === false){
+    alert("Select at least one option")
+    return;
 }
 
+if(numberEl < 8 || numberEl > 124) {
+    alert("password length min 8 - max 124")
+    return; 
+}
+
+}
 
 generateEl.addEventListener("click", generatePassword);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// alert(includeNumbers());
-
-// console.log(includeSymbols());
-// console.log(includeNumbers());
-// console.log(includeUpperCase());
-// console.log(includeLowerCase());
-
-// generate password function
-
-//pseudo code
-
-// 1 - create an array of options for the password
-
-// 2 - create selectors
-
-// 3 -  create a string that picks a character at random
-
-// 4 - create an if function that looks to see what selectors are chosen.
-
-// when you press the generate button this should trigger a main function with loads of mini functions inside it
-
-// first look at the length of the password choice. this should affect the i < x option for the loop
-
-// then, check if 'symbols' is checked, if it is checked select a 'symbol' at random then move on to next option. if no selection made then just move to next option
-// then, check if 'numbers' is checked, if it is checked select a 'numbers' at random then move on to next option. if no selection made then just move to next option
-// then, check if 'lowerCase' is checked, if it is checked select a 'lowerCase' at random then move on to next option. if no selection made then just move to next option
-// then, check if 'upperCase' is checked, if it is checked select a 'upperCase' at random then move on to next option. if no selection made then just move to next option
-// then, check if 'Special Charecter' is checked, if it is checked select a 'special charachter' at random then move on to next option. if no selection made then just move to next option
-// repeat the procecess again selcting at random (creating a concat option for all the choices) untill lenght is fulfilled.
