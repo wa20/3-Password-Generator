@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
 * {
     margin: 0;
@@ -14,7 +15,7 @@ ol, ul {
 /*====================
 - Table of Contents -
 
-1 - 
+1 -  HTML and Outer Body Section
 
 2 -
 
@@ -53,6 +54,43 @@ h1 {
     font-size: 2.5rem;
 }
 
+@media (min-width: 850px) {
+    .right-angle {
+        width: 0;
+        height: 0;
+        border-top: 200px solid transparent;
+        border-left: 200px solid transparent;
+        border-right: 200px solid rgb(255, 255, 255);
+        position: absolute;
+        top: 74%;
+        left: 49%;
+        z-index: 1;
+        filter: blur(10px);
+        }
+    }
+    
+    @media (min-width: 850px) {
+    .circle {
+        width: 180px;
+        height: 180px;
+        background: white;
+        border-radius: 50%;
+        position: absolute;
+        top: 65%;
+        left: 60%;
+        z-index: 1;
+        filter: blur(10px);
+        box-shadow: 0 0 20px 0 rgb(209, 3, 3);
+    
+        }
+    }    
+    
+
+/*------------
+2 - Main Container
+------------*/
+
+
 
 .container {
     display: flex;
@@ -66,6 +104,11 @@ h1 {
     min-width: 55vh;
     z-index: 3;
 }
+
+
+/*------------
+3 - top container - & Misc
+------------*/
 
 
 input.selector {
@@ -89,24 +132,11 @@ input.selector {
     /* box-shadow: 0 0 0px 0px rgb(97, 96, 96); */
   }
 
-  label {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      align-content: center;
-      flex-wrap: wrap;
-  }
-  .subtext {
-      font-size: 0.5rem;
-      color: rgb(83, 2, 129);
-      
-
-  }
+ 
   
-
 /*======== 
 
- - display section
+ - display and copy button section
 
 ==========*/
 
@@ -126,8 +156,6 @@ input.selector {
     
 }
 
-
-
 .display {
     padding: 0.5rem;
     font-size:2rem;
@@ -137,6 +165,11 @@ input.selector {
     width: 100%;
     padding: 2px;
     border-radius: 15px 0 0 15px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.0rem;
     
 }
 
@@ -179,11 +212,25 @@ input.selector {
     width: 100%;
     padding: 50px;
     z-index: 3;
-
    
 }
 
 
+ label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.subtext {
+    font-size: 0.5rem;
+    color: rgb(83, 2, 129);
+    
+
+}
 
 
 /*======== 
@@ -232,30 +279,3 @@ box-shadow: 0 0 30px 0px rgba(65, 64, 64, 0.336);
 }
 
 
-
-.circle1 {
-    width: 0;
-	height: 0;
-	border-top: 200px solid transparent;
-	border-left: 200px solid transparent;
-    border-right: 200px solid rgb(255, 255, 255);
-    position: absolute;
-    top: 74%;
-    left: 49%;
-    z-index: 1;
-    filter: blur(10px);
-}
-
-.circle2 {
-    width: 180px;
-    height: 180px;
-    background: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 65%;
-    left: 60%;
-    z-index: 1;
-    filter: blur(10px);
-    box-shadow: 0 0 20px 0 rgb(209, 3, 3);
-
-}

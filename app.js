@@ -1,77 +1,79 @@
-
-
-//selectors - display
-
 const resultEl = document.getElementById("result");
-const copyEl = document.getElementById("copy");
+let copyEl = document.getElementById("copy");
 
-//selectors - password options
+let generateEl = document.getElementById("generate");
 
-const lengthEl = document.getElementById("length");
-
-const symbolEl = document.getElementById("symbols");
-const numberEl = document.getElementById("numbers");
-const lowerCaseEl = document.getElementById("lowerCase");
-const upperCaseEl = document.getElementById("upperCase");
-const specialCharacterEl = document.getElementById("specialCharachter");
-
-//selectors - generate button
-
-const generateEl = document.getElementById("generate");
-
-//length selector
+function copyButton() {
+  resultEl.select();
+  resultEl.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("Copied password: " + resultEl.value);
+}
 
 
 
 
+copyEl.addEventListener("click", copyButton);
 
-//global scopes
+function generatePassword() {
 
-const numbers = ['0','1','2','3','4','5','6','7','8','9'];
-const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-const upperCase = "ABCDEFGHIJKLMNOPQRSTUVW";
-const symbols = "§!@£#$%^&*()-+><?"
+  const lengthEl = document.getElementById("length").value;
+  const symbolEl = document.getElementById("symbols").checked;
+  const numberEl = document.getElementById("numbers").checked;
+  const lowerCaseEl = document.getElementById("lowerCase").checked;
+  const upperCaseEl = document.getElementById("upperCase").checked;
+  const specialCharacterEl = document.getElementById("specialCharachter");
 
+  const numbers = "0123456789";
+  const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  const upperCase = "ABCDEFGHIJKLMNOPQRSTUVW";
+  const symbols = "§!@£#$%^&*()_-+><?";
 
-//funcitons
-
-function includeSymbols() {
+  function includeSymbols() {
     return symbols[Math.floor(Math.random() * symbols.length)];
-    
-}
+  }
 
-
-function includeNumbers() {
+  function includeNumbers() {
     return numbers[Math.floor(Math.random() * numbers.length)];
-    
-}
+  }
 
-
-function includeLowerCase() {
+  function includeLowerCase() {
     return lowerCase[Math.floor(Math.random() * lowerCase.length)];
-}
+  }
 
-
-function includeUpperCase() {
+  function includeUpperCase() {
     return upperCase[Math.floor(Math.random() * upperCase.length)];
+  }
 
+  console.log(symbolEl)
+  console.log(lengthEl)
+  
 }
 
-alert(includeNumbers());
 
+generateEl.addEventListener("click", generatePassword);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// alert(includeNumbers());
+
+// console.log(includeSymbols());
+// console.log(includeNumbers());
+// console.log(includeUpperCase());
+// console.log(includeLowerCase());
 
 // generate password function
-
-
-
-
-}
-
-
-
-generateEl.addEventListener('click', generate)
-
-
 
 //pseudo code
 
@@ -79,12 +81,11 @@ generateEl.addEventListener('click', generate)
 
 // 2 - create selectors
 
-// 3 - 
-
+// 3 -  create a string that picks a character at random
 
 // 4 - create an if function that looks to see what selectors are chosen.
 
-// when you press the generate button this shouold trigger a main function with loads of mini functions inside it
+// when you press the generate button this should trigger a main function with loads of mini functions inside it
 
 // first look at the length of the password choice. this should affect the i < x option for the loop
 
@@ -94,5 +95,3 @@ generateEl.addEventListener('click', generate)
 // then, check if 'upperCase' is checked, if it is checked select a 'upperCase' at random then move on to next option. if no selection made then just move to next option
 // then, check if 'Special Charecter' is checked, if it is checked select a 'special charachter' at random then move on to next option. if no selection made then just move to next option
 // repeat the procecess again selcting at random (creating a concat option for all the choices) untill lenght is fulfilled.
-
-// 
