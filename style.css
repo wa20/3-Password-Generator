@@ -61,10 +61,10 @@ h1 {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.377), #ffffffec);
     min-height: 70vh;
     /* width: 100%; */
     min-width: 55vh;
+    z-index: 3;
 }
 
 
@@ -112,7 +112,7 @@ input.selector {
 
 
 .form-bar {
-    background: rgb(18, 14, 250);
+    background: rgba(18, 14, 250, 0.514);
     flex: 1;
     display: flex;
     justify-content: center;
@@ -121,6 +121,8 @@ input.selector {
     border-radius: 20px 20px 0 0;
     padding: 30px;
     width: 100%;
+    backdrop-filter: 100px;
+    z-index: 3;
     
 }
 
@@ -166,7 +168,7 @@ input.selector {
 ==========*/
 
 .choice-container {
-    /* background: cornflowerblue; */
+    background: linear-gradient(45deg, rgb(255, 255, 255), #ffffff65);
     flex: 3;
     display: flex;
     justify-content: space-around;
@@ -175,6 +177,8 @@ input.selector {
     height: 100%;
     width: 100%;
     padding: 50px;
+    z-index: 3;
+
    
 }
 
@@ -197,6 +201,8 @@ input.selector {
     padding: 15px;
     border-radius: 0 0 20px 20px;
     border-style: none;
+    backdrop-filter: 200rem;
+    z-index: 3;
     
 }
 
@@ -220,4 +226,31 @@ box-shadow: 0 0 30px 0px rgba(65, 64, 64, 0.336);
 background: rgb(0, 0, 0);
 color: white;
 box-shadow: 0 0 30px 0px rgba(65, 64, 64, 0.336);
+
+}
+
+
+
+.circle1 {
+    width: 0;
+	height: 0;
+	border-top: 110px solid transparent;
+	border-left: 120px solid rgb(255, 255, 255);
+    border-bottom: 110px solid transparent;
+    position: absolute;
+    top: 76%;
+    left: 29%;
+    z-index: 1;
+}
+
+.circle2 {
+    width: 180px;
+    height: 180px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    z-index: 1;
+
 }
