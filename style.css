@@ -98,7 +98,7 @@ input.selector {
   }
   .subtext {
       font-size: 0.5rem;
-      color: gray;
+      color: rgb(83, 2, 129);
       
 
   }
@@ -112,7 +112,7 @@ input.selector {
 
 
 .form-bar {
-    background: rgba(18, 14, 250, 0.514);
+    background: rgba(18, 14, 250, 0.425);
     flex: 1;
     display: flex;
     justify-content: center;
@@ -168,7 +168,8 @@ input.selector {
 ==========*/
 
 .choice-container {
-    background: linear-gradient(45deg, rgb(255, 255, 255), #ffffff65);
+    background: linear-gradient(25deg, rgba(151, 150, 245, 0.514), #556efa65);
+   
     flex: 3;
     display: flex;
     justify-content: space-around;
@@ -196,12 +197,13 @@ input.selector {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(250, 240, 230, 0.712);
+    /* background: rgba(250, 240, 230, 0.712); */
+    background: rgba(18, 14, 250, 0.514);
     width: 100%;
     padding: 15px;
     border-radius: 0 0 20px 20px;
     border-style: none;
-    backdrop-filter: 200rem;
+    overflow: hidden;
     z-index: 3;
     
 }
@@ -234,13 +236,14 @@ box-shadow: 0 0 30px 0px rgba(65, 64, 64, 0.336);
 .circle1 {
     width: 0;
 	height: 0;
-	border-top: 110px solid transparent;
-	border-left: 120px solid rgb(255, 255, 255);
-    border-bottom: 110px solid transparent;
+	border-top: 200px solid transparent;
+	border-left: 200px solid transparent;
+    border-right: 200px solid rgb(255, 255, 255);
     position: absolute;
-    top: 76%;
-    left: 29%;
+    top: 74%;
+    left: 49%;
     z-index: 1;
+    filter: blur(10px);
 }
 
 .circle2 {
@@ -249,8 +252,10 @@ box-shadow: 0 0 30px 0px rgba(65, 64, 64, 0.336);
     background: white;
     border-radius: 50%;
     position: absolute;
-    top: 15%;
+    top: 65%;
     left: 60%;
     z-index: 1;
+    filter: blur(10px);
+    box-shadow: 0 0 20px 0 rgb(209, 3, 3);
 
 }
