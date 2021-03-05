@@ -3,7 +3,7 @@ let copyEl = document.getElementById("copy");
 
 let generateEl = document.getElementById("generate");
 
-function copyButton() {
+function copyButton() { // Function once copy button is pressed 
   resultEl.select();
   resultEl.setSelectionRange(0, 99999);
   document.execCommand("copy");
@@ -11,7 +11,10 @@ function copyButton() {
 }
 copyEl.addEventListener("click", copyButton);
 
-function generatePassword() {
+
+
+function generatePassword() { //Main Function once Generate Password is pressed
+  
   const lengthEl = document.getElementById("length").value;
   const symbolEl = document.getElementById("symbols").checked;
   const numberEl = document.getElementById("numbers").checked;
@@ -25,6 +28,19 @@ function generatePassword() {
   const symbols = "§!@£#$%^&*()_-+><?";
   let password = "";
   let wordOps = "";
+
+
+if(symbolEl === false && numberEl === false && lowerCaseEl === false && upperCaseEl === false){
+    alert("Select at least one option")
+    return;
+} else 
+
+if(numberEl < 8 || numberEl > 128) {
+    alert("Password Length: Min 8 - Max 128")
+    return; 
+
+} else  return 
+
 
   function includeSymbols() {
     return symbols[Math.floor(Math.random() * symbols.length)];
@@ -84,17 +100,10 @@ function generatePassword() {
   resultEl.value = password;
 
 
-if(symbolEl === false && numberEl === false && lowerCaseEl === false && upperCaseEl === false){
-    alert("Select at least one option")
-    return;
 }
 
-if(numberEl < 8 || numberEl > 124) {
-    alert("password length min 8 - max 124")
-    return; 
-}
-
-}
 
 generateEl.addEventListener("click", generatePassword);
+
+
 
