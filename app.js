@@ -13,6 +13,10 @@ copyEl.addEventListener("click", copyButton);
 
 
 
+
+
+
+
 function generatePassword() { //Main Function once Generate Password is pressed
   
   const lengthEl = document.getElementById("length").value;
@@ -21,6 +25,7 @@ function generatePassword() { //Main Function once Generate Password is pressed
   const lowerCaseEl = document.getElementById("lowerCase").checked;
   const upperCaseEl = document.getElementById("upperCase").checked;
   const specialCharacterEl = document.getElementById("specialCharacter").value;
+ 
 
   const numbers = "0123456789";
   const lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -38,11 +43,11 @@ if(symbolEl === false && numberEl === false && lowerCaseEl === false && upperCas
 } 
     
 
-// if(numberEl < 8 || numberEl > 128) {
-//     alert("Password Length: Min 8 - Max 128")
-//     return; 
+if(lengthEl < 8 || lengthEl > 128) {
+    alert("Password Length: Min 8 - Max 128")
+    return; 
 
-// }     
+}     
   
 
 
@@ -110,6 +115,4 @@ if(symbolEl === false && numberEl === false && lowerCaseEl === false && upperCas
 
 
 generateEl.addEventListener("click", generatePassword);
-
-
 
