@@ -28,18 +28,24 @@ function generatePassword() { //Main Function once Generate Password is pressed
   const symbols = "§!@£#$%^&*()_-+><?";
   let password = "";
   let wordOps = "";
+ 
+
 
 
 if(symbolEl === false && numberEl === false && lowerCaseEl === false && upperCaseEl === false){
     alert("Select at least one option")
-    return;
-} else 
 
-if(numberEl < 8 || numberEl > 128) {
-    alert("Password Length: Min 8 - Max 128")
-    return; 
+} 
+    
 
-} else  return 
+// if(numberEl < 8 || numberEl > 128) {
+//     alert("Password Length: Min 8 - Max 128")
+//     return; 
+
+// }     
+  
+
+
 
 
   function includeSymbols() {
