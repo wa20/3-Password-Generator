@@ -11,9 +11,6 @@ this tool uses javascript to randomize and generate and string of characters dep
 - click generate password. 
 - once generated, clicking the copy button will copy your password to your clipboard.
 
-Screens grab of the password generator. 
-![](Assets/PW-Generator-screenshot.png)
+Screens grab of the password generator.
 
-
-
-
+<img src="./Assets/PW-Generator-screenshot.png" width="100"/>
