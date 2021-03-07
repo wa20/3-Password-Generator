@@ -17,7 +17,7 @@
     <h1>
       <img
         src="./Assets/password.png"
-        alt="astrick password behind pad lock"
+        alt="password behind pad lock"
         class="key"
       />Password Generator
     </h1>
@@ -29,8 +29,8 @@
     <main class="container">
       <form class="form-bar">
         <input id="result" class="display" value="p@ssW0rd" />
-        <button id="copy" class="copy-button" type="copy">
-          <i class="copy-button fas fa-copy"></i>
+        <button id="copy" class="copy-button tooltip" type="copy">
+          <i class="copy-button fas fa-copy"><span class="tool-tip-text">click to copy password</span></i>
         </button>
       </form>
 
@@ -78,6 +78,6 @@
       </section>
     </main>
 
-    <script src="app.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

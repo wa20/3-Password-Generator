@@ -23,9 +23,11 @@ ul {
 
 4 - display and copy button section
 
-5 - Choice container section
+5 - Tooltip
 
-6 - Password generator button
+6 - Choice container section
+
+7 - Password generator button
 
 ====================*/
 
@@ -56,7 +58,7 @@ html {
 }
 
 /*------------
-1.a - shapes
+1.a - backgorund shapes
 ------------*/
 
 @media (min-width: 850px) {
@@ -211,8 +213,40 @@ input.checkbox {
   color: rgb(255, 255, 255);
 }
 
+
+/*========= 
+5 - Tooltip
+===========*/
+
+.tooltip {
+    position: relative;
+    display: inline-block; 
+  }
+  
+ .tool-tip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(0, 0, 0, 0.356);
+    color: #fff;
+    text-align: center;
+    font-family: "Rubik", sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    left: -150%;
+    top: -120%;
+    z-index: 4;
+  }
+  
+  .tooltip:hover .tool-tip-text {
+    visibility: visible;
+  }
+
+
+
 /*======== 
-5 - Choice container section
+6 - Choice container section
 ==========*/
 
 .choice-container {
@@ -243,7 +277,7 @@ label {
 }
 
 /*======== 
-6 - Password generator button
+7 - Password generator button
 ==========*/
 
 .pw-generator {

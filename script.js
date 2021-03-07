@@ -3,6 +3,10 @@ let copyEl = document.getElementById("copy");
 
 let generateEl = document.getElementById("generate");
 
+
+
+
+
 function copyButton() { // Function once copy button is pressed 
   resultEl.select();
   resultEl.setSelectionRange(0, 99999);
@@ -27,12 +31,12 @@ function generatePassword() { //Main Function once Generate Password is pressed
   const specialCharacterEl = document.getElementById("specialCharacter").value;
  
 
-  const numbers = "0123456789";
-  const lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  const upperCase = "ABCDEFGHIJKLMNOPQRSTUVW";
-  const symbols = "§!@£#$%^&*()_-+><?";
-  let password = "";
-  let wordOps = "";
+  var numbers = "0123456789";
+  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVW";
+  var symbols = "§!@£#$%^&*()_-+><?";
+  var password = "";
+  var wordOps = "";
  
 
 
@@ -49,10 +53,6 @@ if(lengthEl < 8 || lengthEl > 128) {
 
 }     
   
-
-
-
-
   function includeSymbols() {
     return symbols[Math.floor(Math.random() * symbols.length)];
   }
@@ -69,34 +69,36 @@ if(lengthEl < 8 || lengthEl > 128) {
     return upperCase[Math.floor(Math.random() * upperCase.length)];
   }
 
+
+
   if(specialCharacterEl.length > 0) {
       password += specialCharacterEl
   }
 
 
   if (symbolEl === true) {
-    let randomSymbol = includeSymbols();
+    var randomSymbol = includeSymbols();
     password += randomSymbol;
     wordOps += symbols
   }
 
 
   if (numberEl === true) {
-    let randomNumber = includeNumbers();
+    var randomNumber = includeNumbers();
     password += randomNumber;
     wordOps += numbers
   }
 
 
   if (lowerCaseEl === true) {
-    let randomLowerCase = includeLowerCase();
+    var randomLowerCase = includeLowerCase();
     password += randomLowerCase;
     wordOps += lowerCase
   }
 
 
   if (upperCaseEl === true) {
-    let randomUpperCase = includeUpperCase();
+    var randomUpperCase = includeUpperCase();
     password += randomUpperCase;
     wordOps += upperCase
   }
