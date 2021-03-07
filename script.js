@@ -46,7 +46,6 @@ if(symbolEl === false && numberEl === false && lowerCaseEl === false && upperCas
 
 } 
     
-
 if(lengthEl < 8 || lengthEl > 128) {
     alert("Password Length: Min 8 - Max 128")
     return; 
